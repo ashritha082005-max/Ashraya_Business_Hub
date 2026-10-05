@@ -11,7 +11,7 @@ import ResetPassword from "./pages/ResetPassword";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Ashraya_Business_Hub">
       <Routes>
 
         <Route
