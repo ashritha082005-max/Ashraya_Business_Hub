@@ -1,5 +1,12 @@
-Backend/.env
-Backend/node_modules/
-Frontend/node_modules/
-Frontend/dist/
+node_modules/
 .env
+.env.*
+!.env.example
+
+__pycache__/
+*.pyc
+
+dist/
+build/
+
+.vscode/
