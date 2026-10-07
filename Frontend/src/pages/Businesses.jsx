@@ -65,8 +65,8 @@ function Businesses() {
     const loadBusinesses = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/businesses"
-        );
+  `${import.meta.env.VITE_API_URL}/api/businesses`
+);
 
         const data = await response.json();
 
