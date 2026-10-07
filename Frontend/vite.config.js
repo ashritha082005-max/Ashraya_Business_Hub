@@ -3,7 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.GITHUB_ACTIONS
-    ? "/Ashraya_Business_Hub/"
-    : "/",
+  base: "/Ashraya_Business_Hub/",
 });
