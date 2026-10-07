@@ -1,12 +1,23 @@
+# Dependencies
 node_modules/
+
+# Environment files / secrets
 .env
 .env.*
 !.env.example
 
+# Python
 __pycache__/
 *.pyc
 
+# Build output
 dist/
 build/
 
+# Editor
 .vscode/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*

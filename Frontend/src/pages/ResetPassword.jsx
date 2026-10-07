@@ -14,26 +14,16 @@ function ResetPassword() {
   const navigate = useNavigate();
   const { token } = useParams();
 
-  const [showPassword, setShowPassword] =
-    useState(false);
-
+  const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] =
     useState(false);
 
-  const [password, setPassword] =
-    useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
-  const [confirmPassword, setConfirmPassword] =
-    useState("");
-
-  const [loading, setLoading] =
-    useState(false);
-
-  const [error, setError] =
-    useState("");
-
-  const [success, setSuccess] =
-    useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,7 +32,9 @@ function ResetPassword() {
     setSuccess("");
 
     if (!password || !confirmPassword) {
-      setError("Please enter and confirm your new password.");
+      setError(
+        "Please enter and confirm your new password."
+      );
       return;
     }
 
@@ -67,7 +59,7 @@ function ResetPassword() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/auth/reset-password/${token}`,
+        `${import.meta.env.VITE_API_URL}/api/auth/reset-password/${token}`,
         {
           method: "POST",
 
@@ -100,7 +92,6 @@ function ResetPassword() {
       setTimeout(() => {
         navigate("/login");
       }, 2000);
-
     } catch (error) {
       console.error(
         "RESET PASSWORD ERROR:",
@@ -118,14 +109,10 @@ function ResetPassword() {
 
   return (
     <div className="login-page">
-
-      {/* Background decoration */}
       <div className="login-bg-circle login-bg-circle-one"></div>
       <div className="login-bg-circle login-bg-circle-two"></div>
 
       <div className="login-container">
-
-        {/* Back button */}
         <button
           className="login-back-button"
           onClick={() => navigate("/login")}
@@ -134,52 +121,37 @@ function ResetPassword() {
           Back to Login
         </button>
 
-        {/* Reset Password Card */}
         <div className="login-card">
-
-          {/* Logo */}
           <div className="login-logo">
-
             <div className="login-logo-icon">
               <Sparkles size={22} />
             </div>
 
             <span>ASHRAYA</span>
-
           </div>
 
-          {/* Heading */}
           <div className="login-heading">
-
             <h1>Reset Password</h1>
 
             <p>
               Create a new secure password for your
               ASHRAYA account.
             </p>
-
           </div>
 
-          {/* Security badge */}
           <div className="login-security">
-
             <ShieldCheck size={17} />
 
             <span>
               Your account security matters to us
             </span>
-
           </div>
 
           <form onSubmit={handleSubmit}>
-
-            {/* New Password */}
             <div className="login-field">
-
               <label>New Password</label>
 
               <div className="login-input-wrapper">
-
                 <LockKeyhole
                   size={19}
                   className="login-input-icon"
@@ -214,18 +186,13 @@ function ResetPassword() {
                     <Eye size={19} />
                   )}
                 </button>
-
               </div>
-
             </div>
 
-            {/* Confirm Password */}
             <div className="login-field">
-
               <label>Confirm Password</label>
 
               <div className="login-input-wrapper">
-
                 <LockKeyhole
                   size={19}
                   className="login-input-icon"
@@ -262,12 +229,9 @@ function ResetPassword() {
                     <Eye size={19} />
                   )}
                 </button>
-
               </div>
-
             </div>
 
-            {/* Error */}
             {error && (
               <div
                 style={{
@@ -284,7 +248,6 @@ function ResetPassword() {
               </div>
             )}
 
-            {/* Success */}
             {success && (
               <div
                 style={{
@@ -301,7 +264,6 @@ function ResetPassword() {
               </div>
             )}
 
-            {/* Reset button */}
             <button
               type="submit"
               className="login-submit-button"
@@ -314,12 +276,9 @@ function ResetPassword() {
                 ? "Resetting Password..."
                 : "Reset Password"}
             </button>
-
           </form>
 
-          {/* Footer */}
           <p className="login-footer-text">
-
             Remember your password?{" "}
 
             <button
@@ -336,13 +295,9 @@ function ResetPassword() {
             >
               Sign In
             </button>
-
           </p>
-
         </div>
-
       </div>
-
     </div>
   );
 }
