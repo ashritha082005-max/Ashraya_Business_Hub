@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ASHRAYA Business Hub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     LOGIN PAGE
+===================================================== -->
+
+<div class="login-screen" id="loginScreen">
+
+    <div class="login-left">
+
+        <div class="login-brand">
+
+            <div class="logo-mark">A</div>
+
+            <div>
+                <div class="logo-name">ASHRAYA</div>
+                <div class="logo-subtitle">BUSINESS HUB</div>
+            </div>
+
+        </div>
+
+
+        <div class="login-hero">
+
+            <span class="login-badge">
+                <span></span>
+                Smart Business Management
+            </span>
+
+            <h1>
+                Your business.
+                <strong>Your digital home.</strong>
+            </h1>
+
+            <p>
+                Manage customers, projects, revenue and
+                business insights from one intelligent workspace.
+            </p>
+
+
+            <div class="login-features">
+
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Business Analytics</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-users"></i>
+                    <span>Customer Management</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Project Management</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="login-footer">
+            © 2026 ASHRAYA Business Hub
+        </div>
+
+    </div>
+
+
+    <div class="login-right">
+
+        <div class="login-card">
+
+            <div class="mobile-logo">
+                A
+            </div>
+
+            <span class="small-label">
+                WELCOME BACK
+            </span>
+
+            <h2>
+                Sign in to your
+                <span>business hub.</span>
+            </h2>
+
+            <p class="login-description">
+                Enter your details to access your dashboard.
+            </p>
+
+
+            <form id="loginForm">
+
+                <div class="input-group">
+
+                    <label>Email address</label>
+
+                    <div class="input-box">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Password</label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="eye-btn"
+                            onclick="togglePassword()">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="login-options">
+
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="#" onclick="forgotPassword(event)">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <button class="login-submit" type="submit">
+
+                    Sign In
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <div class="demo-info">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <div>
+                    <strong>Demo mode</strong>
+                    <p>
+                        Backend authentication will be connected later.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     DASHBOARD
+===================================================== -->
+
+<div class="dashboard-app" id="dashboardApp">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="logo-mark">
+                A
+            </div>
+
+            <div class="brand-text">
+
+                <strong>ASHRAYA</strong>
+
+                <span>BUSINESS HUB</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-label">
+            MAIN MENU
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <button
+                class="nav-item active"
+                onclick="showPage('overview', this)">
+
+                <i class="fa-solid fa-grid-2"></i>
+
+                <span>Overview</span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('customers', this)">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Customers</span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('projects', this)">
+
+                <i class="fa-solid fa-folder"></i>
+
+                <span>Projects</span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('revenue', this)">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <span>Revenue</span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('analytics', this)">
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>Analytics</span>
+
+            </button>
+
+
+            <div class="sidebar-label second-label">
+                BUSINESS
+            </div>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('business-model', this)">
+
+                <i class="fa-solid fa-puzzle-piece"></i>
+
+                <span>Business Model</span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('settings', this)">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="upgrade-card">
+
+                <div class="upgrade-icon">
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
+
+                <strong>ASHRAYA Insights</strong>
+
+                <p>
+                    Turn your business data into useful insights.
+                </p>
+
+                <button onclick="showToast('Insights feature coming soon')">
+                    Explore →
+                </button>
+
+            </div>
+
+
+            <button class="logout-btn" onclick="logout()">
+
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                <span>Log out</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button
+                class="mobile-menu"
+                onclick="toggleSidebar()">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div class="page-title-area">
+
+                <span id="topGreeting">
+                    BUSINESS OVERVIEW
+                </span>
+
+                <h2 id="topTitle">
+                    Good morning, Ashritha
+                </h2>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button
+                    class="icon-button"
+                    onclick="showToast('No new notifications')">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="top-profile">
+
+                    <div class="avatar">
+                        A
+                    </div>
+
+                    <div>
+
+                        <strong>Ashritha</strong>
+
+                        <span>Business Owner</span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             OVERVIEW
+        ================================================= -->
+
+        <section class="page active-page" id="page-overview">
+
+            <div class="welcome-banner">
+
+                <div>
+
+                    <span>
+                        MONDAY, OCTOBER 5, 2026
+                    </span>
+
+                    <h1>
+                        Let's grow your business.
+                    </h1>
+
+                    <p>
+                        Here's what's happening with your business today.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="banner-button"
+                    onclick="showPageByName('projects')">
+
+                    View Projects
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- STATS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon revenue-icon">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            +12.8%
+                        </span>
+
+                    </div>
+
+                    <span class="stat-label">
+                        TOTAL REVENUE
+                    </span>
+
+                    <h3>
+                        ₹1,24,500
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        12.8% from last month
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon customer-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            +8.4%
+                        </span>
+
+                    </div>
+
+                    <span class="stat-label">
+                        TOTAL CUSTOMERS
+                    </span>
+
+                    <h3>
+                        1,284
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        8.4% from last month
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon project-icon">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            +5.2%
+                        </span>
+
+                    </div>
+
+                    <span class="stat-label">
+                        ACTIVE PROJECTS
+                    </span>
+
+                    <h3>
+                        38
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        5.2% from last month
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon profit-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            +9.7%
+                        </span>
+
+                    </div>
+
+                    <span class="stat-label">
+                        CONVERSION RATE
+                    </span>
+
+                    <h3>
+                        8.6%
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        9.7% from last month
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHART + ACTIVITY -->
+
+            <div class="dashboard-grid">
+
+
+                <div class="panel revenue-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span>
+                                REVENUE OVERVIEW
+                            </span>
+
+                            <h3>
+                                ₹1,24,500
+                            </h3>
+
+                        </div>
+
+                        <select>
+
+                            <option>Last 6 months</option>
+                            <option>Last 12 months</option>
+                            <option>This year</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="chart">
+
+                        <div class="chart-y-axis">
+
+                            <span>150K</span>
+                            <span>100K</span>
+                            <span>50K</span>
+                            <span>0</span>
+
+                        </div>
+
+
+                        <div class="chart-area">
+
+                            <div class="chart-grid-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+
+                            <div class="bars">
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height:42%"></div>
+                                    <small>May</small>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height:55%"></div>
+                                    <small>Jun</small>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height:48%"></div>
+                                    <small>Jul</small>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height:68%"></div>
+                                    <small>Aug</small>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar" style="height:76%"></div>
+                                    <small>Sep</small>
+                                </div>
+
+                                <div class="bar-column">
+                                    <div class="bar current" style="height:91%"></div>
+                                    <small>Oct</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIVITY -->
+
+                <div class="panel activity-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span>
+                                RECENT ACTIVITY
+                            </span>
+
+                            <h3>
+                                Latest updates
+                            </h3>
+
+                        </div>
+
+                        <button
+                            class="more-btn"
+                            onclick="showToast('All activities loaded')">
+
+                            View all
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+                        <div class="activity-item">
+
+                            <div class="activity-avatar customer">
+                                <i class="fa-solid fa-user-plus"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    New customer added
+                                </strong>
+
+                                <p>
+                                    Rahul Enterprises
+                                </p>
+
+                                <small>
+                                    15 minutes ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-avatar payment">
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Payment received
+                                </strong>
+
+                                <p>
+                                    ₹18,500 from Priya Studio
+                                </p>
+
+                                <small>
+                                    2 hours ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-avatar project">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Project completed
+                                </strong>
+
+                                <p>
+                                    Website Redesign
+                                </p>
+
+                                <small>
+                                    Yesterday
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-avatar report">
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Monthly report generated
+                                </strong>
+
+                                <p>
+                                    September 2026
+                                </p>
+
+                                <small>
+                                    2 days ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="quick-section">
+
+                <div class="section-title">
+
+                    <div>
+                        <span>QUICK ACTIONS</span>
+                        <h3>Manage your business</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+                    <button onclick="showPageByName('customers')">
+
+                        <div>
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+                        <span>Add Customer</span>
+
+                        <small>
+                            Create a new customer
+                        </small>
+
+                    </button>
+
+
+                    <button onclick="showPageByName('projects')">
+
+                        <div>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+
+                        <span>New Project</span>
+
+                        <small>
+                            Start a new project
+                        </small>
+
+                    </button>
+
+
+                    <button onclick="showPageByName('revenue')">
+
+                        <div>
+                            <i class="fa-solid fa-money-bill-transfer"></i>
+                        </div>
+
+                        <span>Add Transaction</span>
+
+                        <small>
+                            Record income or expense
+                        </small>
+
+                    </button>
+
+
+                    <button onclick="showPageByName('analytics')">
+
+                        <div>
+                            <i class="fa-solid fa-chart-column"></i>
+                        </div>
+
+                        <span>View Analytics</span>
+
+                        <small>
+                            Understand performance
+                        </small>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CUSTOMERS
+        ================================================= -->
+
+        <section class="page" id="page-customers">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span>CUSTOMER MANAGEMENT</span>
+
+                    <h1>Customers</h1>
+
+                    <p>
+                        Manage your customer relationships.
+                    </p>
+
+                </div>
+
+                <button
+                    class="primary-action"
+                    onclick="showToast('Customer form will be connected to MongoDB')">
+
+                    <i class="fa-solid fa-plus"></i>
+                    Add Customer
+
+                </button>
+
+            </div>
+
+
+            <div class="stats-grid two-stats">
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        TOTAL CUSTOMERS
+                    </span>
+
+                    <h3>1,284</h3>
+
+                    <p class="positive-text">
+                        +8.4% this month
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        NEW THIS MONTH
+                    </span>
+
+                    <h3>86</h3>
+
+                    <p class="positive-text">
+                        +14.2% this month
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel table-panel">
+
+                <div class="table-header">
+
+                    <div>
+                        <h3>Customer List</h3>
+                        <p>Recently added customers</p>
+                    </div>
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-search"></i>
+
+                        <input
+                            type="text"
+                            placeholder="Search customers..."
+                            onkeyup="searchTable(this, 'customerTable')">
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table id="customerTable">
+
+                        <thead>
+
+                            <tr>
+                                <th>Customer</th>
+                                <th>Business</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Joined</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <div class="table-user">
+                                        <div>RS</div>
+                                        <strong>Rahul Sharma</strong>
+                                    </div>
+                                </td>
+
+                                <td>Rahul Enterprises</td>
+                                <td>rahul@example.com</td>
+
+                                <td>
+                                    <span class="status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>Oct 04, 2026</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="table-user">
+                                        <div>PS</div>
+                                        <strong>Priya Shah</strong>
+                                    </div>
+                                </td>
+
+                                <td>Priya Studio</td>
+                                <td>priya@example.com</td>
+
+                                <td>
+                                    <span class="status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>Oct 02, 2026</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="table-user">
+                                        <div>AK</div>
+                                        <strong>Arjun Kumar</strong>
+                                    </div>
+                                </td>
+
+                                <td>AK Solutions</td>
+                                <td>arjun@example.com</td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>Sep 28, 2026</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="table-user">
+                                        <div>NM</div>
+                                        <strong>Neha Menon</strong>
+                                    </div>
+                                </td>
+
+                                <td>NM Designs</td>
+                                <td>neha@example.com</td>
+
+                                <td>
+                                    <span class="status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>Sep 25, 2026</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================= -->
+
+        <section class="page" id="page-projects">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span>PROJECT MANAGEMENT</span>
+
+                    <h1>Projects</h1>
+
+                    <p>
+                        Track your business projects and progress.
+                    </p>
+
+                </div>
+
+                <button
+                    class="primary-action"
+                    onclick="showToast('New project form will be connected to the backend')">
+
+                    <i class="fa-solid fa-plus"></i>
+                    New Project
+
+                </button>
+
+            </div>
+
+
+            <div class="project-grid">
+
+                <div class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-symbol">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+
+                        <span class="status active">
+                            In Progress
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Business Website
+                    </h3>
+
+                    <p>
+                        Modern website development for a local business.
+                    </p>
+
+                    <div class="project-info">
+
+                        <span>
+                            Budget
+                            <strong>₹45,000</strong>
+                        </span>
+
+                        <span>
+                            Deadline
+                            <strong>Oct 20</strong>
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-header">
+
+                        <span>Progress</span>
+
+                        <strong>72%</strong>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div style="width:72%"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-symbol purple">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+
+                        <span class="status active">
+                            In Progress
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Mobile App
+                    </h3>
+
+                    <p>
+                        Customer-focused mobile application development.
+                    </p>
+
+                    <div class="project-info">
+
+                        <span>
+                            Budget
+                            <strong>₹68,000</strong>
+                        </span>
+
+                        <span>
+                            Deadline
+                            <strong>Nov 05</strong>
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-header">
+
+                        <span>Progress</span>
+
+                        <strong>48%</strong>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div style="width:48%"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-symbol green">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+
+                        <span class="status completed">
+                            Completed
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        AI Business Assistant
+                    </h3>
+
+                    <p>
+                        AI-powered business support and automation system.
+                    </p>
+
+                    <div class="project-info">
+
+                        <span>
+                            Budget
+                            <strong>₹85,000</strong>
+                        </span>
+
+                        <span>
+                            Completed
+                            <strong>Sep 30</strong>
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-header">
+
+                        <span>Progress</span>
+
+                        <strong>100%</strong>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div style="width:100%"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             REVENUE
+        ================================================= -->
+
+        <section class="page" id="page-revenue">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span>FINANCIAL MANAGEMENT</span>
+
+                    <h1>Revenue</h1>
+
+                    <p>
+                        Track income, expenses and business profit.
+                    </p>
+
+                </div>
+
+                <button
+                    class="primary-action"
+                    onclick="showToast('Transaction form will be connected to MongoDB')">
+
+                    <i class="fa-solid fa-plus"></i>
+                    Add Transaction
+
+                </button>
+
+            </div>
+
+
+            <div class="finance-grid">
+
+                <div class="finance-card income">
+
+                    <div class="finance-icon">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+
+                    <span>Total Income</span>
+
+                    <h3>₹1,78,500</h3>
+
+                    <small>
+                        +14.6% this month
+                    </small>
+
+                </div>
+
+
+                <div class="finance-card expense">
+
+                    <div class="finance-icon">
+                        <i class="fa-solid fa-arrow-trend-down"></i>
+                    </div>
+
+                    <span>Total Expenses</span>
+
+                    <h3>₹54,000</h3>
+
+                    <small>
+                        +4.2% this month
+                    </small>
+
+                </div>
+
+
+                <div class="finance-card profit">
+
+                    <div class="finance-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <span>Net Profit</span>
+
+                    <h3>₹1,24,500</h3>
+
+                    <small>
+                        +19.4% this month
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel table-panel">
+
+                <div class="table-header">
+
+                    <div>
+                        <h3>Recent Transactions</h3>
+                        <p>Your latest financial activity</p>
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    Website Project Payment
+                                </td>
+
+                                <td>
+                                    <span class="category income-cat">
+                                        Income
+                                    </span>
+                                </td>
+
+                                <td>
+                                    Oct 04, 2026
+                                </td>
+
+                                <td class="amount-income">
+                                    +₹18,500
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Software Subscription
+                                </td>
+
+                                <td>
+                                    <span class="category expense-cat">
+                                        Expense
+                                    </span>
+                                </td>
+
+                                <td>
+                                    Oct 03, 2026
+                                </td>
+
+                                <td class="amount-expense">
+                                    -₹2,400
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Mobile App Project
+                                </td>
+
+                                <td>
+                                    <span class="category income-cat">
+                                        Income
+                                    </span>
+                                </td>
+
+                                <td>
+                                    Oct 01, 2026
+                                </td>
+
+                                <td class="amount-income">
+                                    +₹32,000
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Marketing
+                                </td>
+
+                                <td>
+                                    <span class="category expense-cat">
+                                        Expense
+                                    </span>
+                                </td>
+
+                                <td>
+                                    Sep 29, 2026
+                                </td>
+
+                                <td class="amount-expense">
+                                    -₹5,600
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ANALYTICS
+        ================================================= -->
+
+        <section class="page" id="page-analytics">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span>BUSINESS INTELLIGENCE</span>
+
+                    <h1>Analytics</h1>
+
+                    <p>
+                        Understand your business performance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="analytics-grid">
+
+                <div class="analytics-card">
+
+                    <div class="analytics-header">
+
+                        <div>
+                            <span>Customer Growth</span>
+                            <strong>+18.4%</strong>
+                        </div>
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+
+                    <div class="analytics-visual">
+
+                        <div class="analytics-line line-one"></div>
+
+                        <div class="analytics-points">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="analytics-months">
+                        <span>May</span>
+                        <span>Jun</span>
+                        <span>Jul</span>
+                        <span>Aug</span>
+                        <span>Sep</span>
+                        <span>Oct</span>
+                    </div>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <div class="analytics-header">
+
+                        <div>
+                            <span>Project Success</span>
+                            <strong>92%</strong>
+                        </div>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+
+                    <div class="success-ring">
+
+                        <div>
+                            <strong>92%</strong>
+                            <span>Success</span>
+                        </div>
+
+                    </div>
+
+                    <p class="analytics-description">
+                        Most of your projects are being completed
+                        successfully and on schedule.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="insight-banner">
+
+                <div class="insight-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div>
+
+                    <span>BUSINESS INSIGHT</span>
+
+                    <h3>
+                        Your customer base is growing steadily.
+                    </h3>
+
+                    <p>
+                        Consider increasing your project capacity
+                        to take advantage of the current growth.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BUSINESS MODEL
+        ================================================= -->
+
+        <section class="page" id="page-business-model">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span>STRATEGY</span>
+
+                    <h1>Business Model Canvas</h1>
+
+                    <p>
+                        Visualize how your business creates and delivers value.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="canvas-grid">
+
+                <div class="canvas-card partners">
+
+                    <span class="canvas-number">01</span>
+
+                    <i class="fa-solid fa-handshake"></i>
+
+                    <h3>Key Partners</h3>
+
+                    <p>
+                        Technology providers, local businesses,
+                        freelancers and service partners.
+                    </p>
+
+                </div>
+
+
+                <div class="canvas-card activities">
+
+                    <span class="canvas-number">02</span>
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <h3>Key Activities</h3>
+
+                    <p>
+                        Business management, analytics,
+                        customer support and digital solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="canvas-card value">
+
+                    <span class="canvas-number">03</span>
+
+                    <i class="fa-solid fa-gem"></i>
+
+                    <h3>Value Proposition</h3>
+
+                    <p>
+                        Simple, affordable and centralized
+                        digital business management.
+                    </p>
+
+                </div>
+
+
+                <div class="canvas-card relationships">
+
+                    <span class="canvas-number">04</span>
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <h3>Customer Relationships</h3>
+
+                    <p>
+                        Personalized support, self-service
+                        tools and long-term relationships.
+                    </p>
+
+                </div>
+
+
+                <div class="canvas-card segments">
+
+                    <span class="canvas-number">05</span>
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h3>Customer Segments</h3>
+
+                    <p>
+                        Startups, small businesses, freelancers
+                        and local entrepreneurs.
+                    </p>
+
+                </div>
+
+
+                <div class="canvas-card channels">
+
+                    <span class="canvas-number">06</span>
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                    <h3>Channels</h3>
+
+                    <p>
+                        Website, social media, referrals,
+                        partnerships and direct outreach.
+                    </p>
+
+                </div>
+
+
+                <div class="canvas-card revenue-model">
+
+                    <span class="canvas-number">07</span>
+
+                    <i class="fa-solid fa-coins"></i>
+
+                    <h3>Revenue Streams</h3>
+
+                    <p>
+                        Website development, subscriptions,
+                        maintenance and AI-powered services.
+                    </p>
+
+                </div>
+
+
+                <div class="canvas-card costs">
+
+                    <span class="canvas-number">08</span>
+
+                    <i class="fa-solid fa-money-bill"></i>
+
+                    <h3>Cost Structure</h3>
+
+                    <p>
+                        Development, hosting, marketing,
+                        maintenance and technology services.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SETTINGS
+        ================================================= -->
+
+        <section class="page" id="page-settings">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span>ACCOUNT</span>
+
+                    <h1>Settings</h1>
+
+                    <p>
+                        Manage your business profile and preferences.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-layout">
+
+                <div class="panel profile-settings">
+
+                    <div class="settings-header">
+
+                        <h3>
+                            Business Profile
+                        </h3>
+
+                        <p>
+                            Basic information about your business.
+                        </p>
+
+                    </div>
+
+
+                    <div class="settings-avatar">
+
+                        <div>
+                            A
+                        </div>
+
+                        <button onclick="showToast('Profile photo upload coming soon')">
+                            Change photo
+                        </button>
+
+                    </div>
+
+
+                    <div class="settings-form">
+
+                        <div class="input-group">
+
+                            <label>Business Name</label>
+
+                            <input
+                                type="text"
+                                value="ASHRAYA Business Hub">
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Owner Name</label>
+
+                            <input
+                                type="text"
+                                value="Ashritha Achary">
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Email</label>
+
+                            <input
+                                type="email"
+                                id="settingsEmail"
+                                value="ashritha@example.com">
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Business Type</label>
+
+                            <select>
+
+                                <option>Technology & Digital Services</option>
+                                <option>Startup</option>
+                                <option>Consulting</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <button
+                            class="primary-action"
+                            onclick="showToast('Settings saved successfully')">
+
+                            Save Changes
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel security-card">
+
+                    <div class="settings-header">
+
+                        <h3>
+                            Security
+                        </h3>
+
+                        <p>
+                            Manage your account security.
+                        </p>
+
+                    </div>
+
+
+                    <div class="security-item">
+
+                        <div>
+
+                            <strong>Password</strong>
+
+                            <p>
+                                Last changed recently
+                            </p>
+
+                        </div>
+
+                        <button onclick="showToast('Password change will be connected to backend')">
+                            Change
+                        </button>
+
+                    </div>
+
+
+                    <div class="security-item">
+
+                        <div>
+
+                            <strong>Two-factor authentication</strong>
+
+                            <p>
+                                Add an extra layer of protection.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input type="checkbox">
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage">
+        Done
+    </span>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
